@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #intro{
+} */
+
+#quiz {
+    display: none;
+}
+
+#finish {
+    display: none;
+}
+
+#highscores {
+    display: none;
+}

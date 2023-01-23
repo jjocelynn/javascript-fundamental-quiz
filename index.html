@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Javascript Fundamentals Quiz</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="#highscores">View Highscores</a>
+            <p>Time: <span id="timeCount"></span></p>
+        </nav>
+        <section id="intro">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers
+                will penalize your score time by 10 seconds!</p>
+            <button id="startBtn">Start Quiz</button>
+        </section>
+        <section id="quiz">
+            <h2 id="question">Ask question here</h2>
+            <ul id="multipleChoice"></ul>
+            <p id="validate">correct/wrong</p>
+        </section>
+        <section id="finish">
+            <h2>All done!</h2>
+            <p>Your final score is: <span id="score">score</span></p>
+            <form>Enter initials: 
+                <input type=text placeholder="J.C"></input>
+                <button>sumbit</button></button>
+            </form>
+        </section>
+        <section id="highscores">
+            <h2>Highscores</h2>
+            <ul id=""></ul>
+            <button>Go Back</button><button>Clear Highscores</button>
+        </section>
+    </main>
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
