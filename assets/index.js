@@ -210,28 +210,3 @@ btnStartQuiz.addEventListener("click", function (event) {
     displayQuestion();
     timer();
 });
-
-
-//object with 5 questions and associated answers
-
-//array of multiple choices for the user to choose from
-
-//when start button is pressed, run the quiz function
-//when quiz function is running, start the timer
-//go through questions until time runs out or all questions are answered
-//when all are answered/time runs out, run function that records initials and score
-
-//Quiz function
-//needs to ask a question
-//needs to display multiple choices for the user to choose from
-//choices need to be clickable
-//compare user choice to the answer
-//output whether they are right or wrong
-//keep score of number of correct answers
-
-//timer function
-//set a count for 60 seconds
-//if answer=wronng, -5 seconds immediately
-//keep score of
-
-//
