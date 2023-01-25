@@ -24,6 +24,8 @@ let multipleChoiceOptions = [
     ".sort()",
     "global scope",
     "key value pairs",
+    "functions",
+    "web apis"
 ];
 
 let questionListArray = [1, 2, 3, 4, 5]; //is directly related to questionList object. could make it more flexible but for the sake of time and effort, i'll just leave it as an array
@@ -117,7 +119,7 @@ multipleChoiceList.addEventListener("click", function (event) { //listens if but
 let finish = function () {
     clearInterval(timerID);
     document.getElementById("quiz").setAttribute("style", "display: none");
-    document.getElementById("finish").setAttribute("style", "display: unset");
+    document.getElementById("finish").setAttribute("style", "display: flex");
     score.textContent = count;
     storeHighScore();
 }
@@ -144,7 +146,7 @@ let highscoresPage = function () {
     document.getElementById("intro").setAttribute("style", "display: none");
     document.getElementById("quiz").setAttribute("style", "display: none");
     document.getElementById("finish").setAttribute("style", "display: none");
-    highscores.setAttribute("style", "display: unset");
+    highscores.setAttribute("style", "display: flex");
 
     let myHighscores = JSON.parse(localStorage.getItem("hi-scores")) || [];
     myHighscores.sort(function (x, y) {
@@ -154,7 +156,7 @@ let highscoresPage = function () {
     hsList.innerHTML = "";
     for (let a = 0; a < myHighscores.length; a++) {
         let li = document.createElement("li");
-        li.textContent = myHighscores[a].initials + " -- " + myHighscores[a].score;
+        li.textContent = myHighscores[a].initials + "-" + myHighscores[a].score;
         hsList.appendChild(li);
     }
 
@@ -163,12 +165,13 @@ let highscoresPage = function () {
 
     document.querySelector("#backBtn").addEventListener("click", function () {
         highscores.setAttribute("style", "display: none");
-        document.getElementById("intro").setAttribute("style", "display:unset;");
+        document.getElementById("intro").setAttribute("style", "display:flex;");
         window.location.reload();
     })
 
     document.querySelector("#clearBtn").addEventListener("click", function () {
         localStorage.removeItem("hi-scores");
+        window.location.reload();
     })
 
 }
@@ -203,7 +206,7 @@ function timer() {
 //starts the timer
 btnStartQuiz.addEventListener("click", function (event) {
     document.getElementById("intro").setAttribute("style", "display:none;");
-    document.getElementById("quiz").setAttribute("style", "display: unset");
+    document.getElementById("quiz").setAttribute("style", "display: flex");
     displayQuestion();
     timer();
 });
